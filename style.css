@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: url('./imagenes/galaxy.gif'); 
+  
+}
+
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+h1 {
+  color: white;
+  font-size: calc(1rem + 1vw);
+  letter-spacing: 5px;
+  text-shadow: 2px 2.5px grey;
+}
+
+.input-div{
+  margin-top: 50px;
+  padding: 5px;
+}
+
+.input {
+  height: 40px;
+  width: 250px;
+  margin: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+.input::placeholder {
+  color: rgb(197, 195, 195);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.select {
+  height: 40px;
+  margin: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 0 15px;
+  border: none;
+  outline: none;  
+}
+
+
+
+.btn {
+  height: 40px;
+  width: 150px;
+  margin: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  background: #808080c9; 
+  color: white;
+}
+
+.container {
+  width: 60%;
+  margin-top: 30px;
+  height: auto;
+  display: grid;
+  grid-template-areas: 
+  'img text'
+  'img text';
+  background:  #80808047;
+  align-items: center;
+
+} 
+
+.div-img {
+  grid-area: img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.div-text {
+  grid-area: text;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #80808047;  
+  height: 250px;
+  padding: 25px;
+  
+}
+
+.parrafo {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.parrafo-span {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.select-value {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+
+.peso {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 10px;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%; 
+  background: #80808047; 
+}
+
+.valor-error {
+  color: white;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px; 
+  background: #80808073; 
+}
+.parrafo-error {
+  margin: 0 auto;
+}
+
+
+/* media Responsive */
+
+@media screen and (max-width: 576px){
+ .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+h1 {
+  color: white;
+  font-size: calc(1rem + 1vw);
+  letter-spacing: 5px;
+  text-shadow: 2px 2.5px grey;
+  text-align: center;
+  padding: 20px;
+}
+
+.input-div{
+  margin-top: 50px;
+  padding: 5px;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  max-width: 80%;
+  display: block ;
+}
+
+
+.input,
+.select,
+.btn{
+  width: 90%;
+  text-align: center;
+}
+.container {
+  display: grid;
+  width: 100%;
+  max-width: auto;
+  grid-template-rows: repeat(2, 1fr);
+}
+.div-img{
+  max-width: auto;
+  width: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.div-text {
+  text-align: center;
+  max-width: auto;
+  width:  90%;
+  height: auto;
+  grid-column: 1 / 2;
+  grid-row: 2/ 3;
+  margin: 0 auto;
+}
+.valor-error {
+  width: 90%;
+  max-width: 340px;
+  text-align: center;
+}
+}
+
+@media screen and (min-width:577px) and (max-width: 768px){
+ .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 768px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+h1 {
+  color: white;
+  font-size: calc(1em + 1vw);
+  letter-spacing: 5px;
+  text-shadow: 2px 2.5px grey;
+  text-align: center;
+  padding: 20px;
+}
+
+.input-div{
+  margin-top: 50px;
+  padding: 5px;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  max-width: 50%;
+  display: block ;
+}
+
+
+.input,
+.select,
+.btn{
+  width: 90%;
+  text-align: center;
+}
+.container {
+  display: grid;
+  width: 90%;
+  max-width: 768px;
+  justify-content: center;
+  grid-template-rows: repeat(2, 1fr);
+}
+.div-img{
+  max-width: auto;
+  width: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.div-text {
+  text-align: center;
+  max-width: auto;
+  width:  100%;
+  height: auto;
+  grid-column: 1 / 2;
+  grid-row: 2/ 3;
+}
+.valor-error {
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+}
+}
+
+@media screen and (min-width:769px) and (max-width: 1024px){
+ .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+h1 {
+  color: white;
+  font-size: calc(1em + 1vw);
+  letter-spacing: 5px;
+  text-shadow: 2px 2.5px grey;
+  text-align: center;
+  padding: 20px;
+}
+
+.input-div{
+  margin-top: 50px;
+  padding: 5px;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  max-width: 50%;
+  display: block ;
+}
+
+
+.input,
+.select,
+.btn{
+  width: 90%;
+  text-align: center;
+}
+.container {
+  display: grid;
+  width: 90%;
+  max-width: 768px;
+  justify-content: center;
+  grid-template-rows: repeat(2, 1fr);
+}
+.div-img{
+  max-width: auto;
+  width: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.div-text {
+  text-align: center;
+  max-width: auto;
+  width:  100%;
+  height: auto;
+  grid-column: 1 / 2;
+  grid-row: 2/ 3;
+}
+.valor-error {
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+}
+}
+
+@media screen and (min-width: 1025px){
+  .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+h1 {
+  color: white;
+  font-size: calc(1rem + 1vw);
+  letter-spacing: 5px;
+  text-shadow: 2px 2.5px grey;
+}
+
+.input-div{
+  margin-top: 50px;
+  padding: 5px;
+}
+
+.input {
+  height: 40px;
+  width: 250px;
+  margin: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+.input::placeholder {
+  color: rgb(197, 195, 195);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.select {
+  height: 40px;
+  margin: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 0 15px;
+  border: none;
+}
+
+.btn {
+  height: 40px;
+  width: 150px;
+  margin: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  background: #808080c9; 
+  color: white;
+}
+
+.container {
+  width: 60%;
+  margin-top: 30px;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background:  #80808047;
+  align-items: center;
+
+} 
+
+.div-img {
+  max-width: 100%;
+  width: 100%;
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.div-text {
+  grid-column: 2 / 3;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #80808047;  
+  height: 250px;
+  padding: 25px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.parrafo {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.parrafo-span {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.select-value {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+
+.peso {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 10px;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%; 
+  background: #80808047; 
+}
+
+.valor-error {
+  color: white;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px; 
+  background: #80808073; 
+}
+.parrafo-error {
+  margin: 0 auto;
+}
+}
+
+
+
+
+
